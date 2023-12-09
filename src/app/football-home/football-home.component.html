@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col mt-3">
+            <h4 class="text-center">Football Updates</h4>
+        </div>
+    </div>
+    <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item" *ngFor="let country of countries">
+            <a class="nav-link" (click)="onClickCountry(country)"
+                [ngClass]="{'active' : selectedCountry?.name == country.name}"
+                id="{{country+'select'}}">{{country.name}}</a>
+        </li>
+    </ul>
+
+</div>
+
+<app-football-standings *ngIf="selectedCountry" [leagueId]="leagueId" [season]="season"></app-football-standings>

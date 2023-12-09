@@ -1,0 +1,16 @@
+<table class="table table-striped table-hover table-bordered mt-5" *ngIf="results.length > 0">
+    <tbody>
+        <tr *ngFor="let result of results">
+            <td><img height="30" [src]="result.teams.home.logo" /></td>
+            <td>{{result.teams.home.name}}</td>
+            <td>{{result.goals.home}}</td>
+            <td>-</td>
+            <td>{{result.goals.away}}</td>
+            <td>{{result.teams.away.name}}</td>
+            <td><img height="30" [src]="result.teams.away.logo" /></td>
+        </tr>
+    </tbody>
+</table>
+<div class="back-btn mt-5">
+    <button type="button" class="btn btn-primary ml-5" (click)="goBack()">Back</button>
+</div>
