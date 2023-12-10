@@ -27,5 +27,5 @@ export const BaseUrl: string = 'https://v3.football.api-sports.io/';
 
 export const ServiceHeaders = {
     'x-rapidapi-host': 'v3.football.api-sports.io',
-    'x-rapidapi-key': 'fb151c380978a784080ca4f80d2cf3f1',
+    'x-rapidapi-key': 'ef6bece72f053c77dc7e00b81ced44c5',
 }
