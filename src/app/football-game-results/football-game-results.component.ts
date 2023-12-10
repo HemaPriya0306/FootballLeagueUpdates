@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FixtureResponse } from '../model/model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FootballService } from '../services/football.service';
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './football-game-results.component.html',
   styleUrls: ['./football-game-results.component.scss']
 })
-export class FootballGameResultsComponent {
+export class FootballGameResultsComponent implements OnDestroy {
   results: FixtureResponse[] = [];
   teamId!: number;
   routeSubscription: Subscription;
@@ -32,5 +32,9 @@ export class FootballGameResultsComponent {
 
   goBack() {
     this.router.navigate(['/home']);
+  }
+
+  ngOnDestroy() {
+    this.routeSubscription.unsubscribe();
   }
 }

@@ -8,7 +8,7 @@
         <li class="nav-item" *ngFor="let country of countries">
             <a class="nav-link" (click)="onClickCountry(country)"
                 [ngClass]="{'active' : selectedCountry?.name == country.name}"
-                id="{{country+'select'}}">{{country.name}}</a>
+                id="{{country.name+'Select'}}">{{country.name}}</a>
         </li>
     </ul>
 

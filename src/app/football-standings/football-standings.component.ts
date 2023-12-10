@@ -21,7 +21,6 @@ export class FootballStandingsComponent implements OnChanges {
 
   ngOnChanges(): void {
     if (this.leagueId && this.season) {
-      console.log(this.leagueId, this.season);
       this.footballService.getStandings(this.leagueId, this.season).subscribe((data) => {
         if (data.response.length > 0) {
           this.standings = data.response[0].league.standings[0];

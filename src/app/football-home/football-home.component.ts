@@ -36,7 +36,7 @@ export class FootballHomeComponent implements OnInit {
         this.leagueId = data.response[0].league.id;
         this.season = data?.response[0].seasons[0].year.toString();
       } else {
-        data.errors && data.errors.rateLimit ? alert(data.errors.rateLimit) : alert("Problem detected. Please try after some time");
+        data.errors && data.errors.rateLimit ? alert(data.errors.rateLimit) : alert("You have reached the request limit for the day.");
       }
     });
   }
